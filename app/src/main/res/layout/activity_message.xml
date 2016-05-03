@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.rashata.jjamie.messenger.activity.MessageActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleViewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:paddingBottom="10dp"
+            app:stackFromEnd="true"
+            android:paddingTop="10dp"></android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/zone_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_message"
+                style="@style/login_editText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="type a message"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btn_sent"
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_square"
+                android:text="Sent"
+                android:onClick="mClickSentMessage"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

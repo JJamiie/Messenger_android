@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/logo_app" />
+
+        <EditText
+            android:id="@+id/edt_username"
+            style="@style/login_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="username" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            style="@style/login_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="password"
+            android:password="true" />
+
+        <CheckBox
+            android:id="@+id/chk_remember_usr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:buttonTint="#FFFFFF"
+            android:text="Remember Username"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_round"
+            android:onClick="mClickSignIn"
+            android:text="Sign in"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/overlayWhite" />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+    </FrameLayout>
+
+</RelativeLayout>

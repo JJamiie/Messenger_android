@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="13dp">
+
+    <TextView
+        android:id="@+id/txt_message_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/grayDark"
+        android:textStyle="bold"
+        android:text="Mon, May 2" />
+
+</FrameLayout>
