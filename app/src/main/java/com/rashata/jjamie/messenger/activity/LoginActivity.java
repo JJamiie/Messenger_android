@@ -54,7 +54,6 @@ public class LoginActivity extends Activity {
         sharedPreferences = getSharedPreferences("MY_PREFERENCE", Context.MODE_PRIVATE);
         edt_username.setText(sharedPreferences.getString("USERNAME", ""));
         chk_remember_usr.setChecked(sharedPreferences.getBoolean("REMEMBER", false));
-
     }
 
     public void mClickSignIn(View v) {
